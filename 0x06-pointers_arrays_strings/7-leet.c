@@ -1,30 +1,29 @@
 #include "main.h"
 
 /**
- *cap_string - capitalize characters
- *@s: string
+ *leet - encode strings
+ *@a: array
  *
- *Return: string
+ *Return: a
  */
 
-char *cap_string(char *s)
+char *leet(char *a)
 {
-int i = 0;
-int j;
-char spc[] = {' ', '\t', '\n', ',', ';', '.', '!', '"', '(', ')', '{', '}'};
+char s[] = "aAeEoOtTlL";
+char p[] = "4433007711";
 
-if (s[0] >= 'a' && s[0] <= 'z')
+int i = 0;
+int j = 0;
+
+while (a[i] != '\0')
 {
-s[0] -= 32;
-}
-while (s[i] != '\0')
+for (j = 0; s[j] != '\0' && a[i] != s[j]; j++)
+;
+if (j < 10)
 {
-for (j = 0; spc[j] != '\0'; j++)
-{
-if (s[i - 1] == spc[j] && s[i] <= 122 && s[i] >= 97)
-s[i] = s[i] - 32;
+a[i] = p[j];
 }
 i++;
 }
-return (s);
+return (a);
 }
