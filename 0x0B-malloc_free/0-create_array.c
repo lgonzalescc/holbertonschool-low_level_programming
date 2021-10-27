@@ -1,4 +1,4 @@
-#include "holberton.h"
+#include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -17,7 +17,7 @@ char *m;
 
 if (size == 0)
 {
-	return (NULL);
+return (NULL);
 }
 m = malloc(sizeof(char) * size);
 if (m == NULL)
