@@ -1,3 +1,3 @@
 #!/bin/bash
-cpp $CFILE > c 
-/* Also could be : "gcc -E $CFILE -o c" */
+# another way is : 'cpp $CFILE > c' , 'gcc -E $CFILE -o c' OR 'gcc -E $CFILE > c'
+gcc -E $CFILE > c
